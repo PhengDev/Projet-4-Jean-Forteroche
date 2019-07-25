@@ -1,0 +1,126 @@
+/* body */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+/*                             HOME                         */
+
+/* Header */
+
+#navbarCollapse {
+    margin-left: 20px;
+}
+
+nav img {
+    width: 50px;
+}
+
+.title_home{
+    margin-top: 60px;
+}
+
+.fa-home, .fa-bible, .fa-envelope, .fa-sign-in-alt, .fa-sign-out-alt {
+    color : #3399ff;
+    font-size: 1.2em;
+}
+
+.menu-hover:hover {
+color: blue;
+}
+
+/* Section */
+
+.image_Jean {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+.text-jumbotron {
+    font-size: 1.2em;
+}
+
+/* 3 Last Chapter */
+
+.chapter_list{
+    padding-top: 20px;
+}
+
+/* Footer */
+
+.text-footer {
+    margin: 0px;
+}
+
+footer {
+    height: 50px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.fa-copyright {
+    margin-right: 10px;
+    color:white;
+}
+
+/*                             BOOK                         */
+
+.style-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/*                             CHAPTER                         */
+
+/* Commentaire */
+
+.comment {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.style-comment {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+/* Contenu */
+
+.content {
+    margin-bottom: 0px;
+}
+
+.style-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.container-page {
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 100%;
+}
