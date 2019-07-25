@@ -1,3 +1,5 @@
+<?php require_once("views/frontend/viewMenu.php") ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
