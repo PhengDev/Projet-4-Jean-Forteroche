@@ -9,14 +9,14 @@ class View
     /* Récupère le nom de la vue dans le constructeur*/
     public function __construct($action)
     {
-        $this->_file = 'views/frontend/view' . $action . '.php';
+        $this->_file = 'views/view' . $action . '.php';
     }
 
     /*Génère et affiche la vue*/
     public function generate($data)
     {
         $content = $this->generateFile($this->_file, $data);
-        $view = $this->generateFile('views/frontend/template.php', array(
+        $view = $this->generateFile('views/template.php', array(
             't' => $this->_t,
             'content' => $content
         ));

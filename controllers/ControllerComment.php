@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('views/frontend/View.php');
+require_once('views/View.php');
 
 class ControllerComment {
 

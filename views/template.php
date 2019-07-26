@@ -1,4 +1,4 @@
-<?php require_once("views/frontend/viewMenu.php") ?>
+<?php require_once("views/viewMenu.php") ?>
 
 <!DOCTYPE html>
 <html lang="fr">
