@@ -29,20 +29,89 @@ class Comment
         }
     }
 
-      /*SETTER*/
-      public function setId($id)
-      {
-          $id = (int) $id;
-  
-          if ($id > 0) {
-              $this->_id = $id;
-          }
-      }
+    /*SETTER*/
+    public function setId($id)
+    {
+        $id = (int) $id;
 
-       /*GETTER*/
+        if ($id > 0) {
+            $this->_id = $id;
+        }
+    }
+
+    public function setId_Post($id_post)
+    {
+        $id_post = (int) $id_post;
+
+        if ($id_post > 0) {
+            $this->_id_post = $id_post;
+        }
+    }
+
+    public function setTitle_Post($title_post)
+    {
+        if (is_string($title_post)) {
+            $this->_title_post = $title_post;
+        }
+    }
+
+    public function setAuthor($author)
+    {
+        if (is_string($author)) {
+            $this->_author = $author;
+        }
+    }
+
+    public function setComment($comment)
+    {
+        if (is_string($comment)) {
+            $this->_comment = $comment;
+        }
+    }
+
+    public function setDate_Comment_Fr($dateComment)
+    {
+        $this->_date_comment_fr = $dateComment;
+    }
+
+    public function setCheck_Comment($checkComment)
+    {
+        $this->_check_comment = $checkComment;
+    }
+
+    /*GETTER*/
     public function id()
     {
         return $this->_id;
     }
+    
+    public function idPost()
+    {
+        return $this->_id_post;
+    }
 
+    public function titlePost()
+    {
+        return $this->_title_post;
+    }
+
+    public function author()
+    {
+        return $this->_author;
+    }
+
+    public function comment()
+    {
+        return $this->_comment;
+    }
+
+    public function dateComment()
+    {
+        return $this->_date_comment_fr;
+    }
+
+    public function checkComment()
+    {
+        return $this->_check_comment;
+    }
 }

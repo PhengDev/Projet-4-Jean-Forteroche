@@ -38,4 +38,47 @@ class ChapterManager extends Model
         return new Chapter($data);
         $req->closeCursor();
     }
+
+    /*Insérer un nouveau chapitre dans la base de données*/
+    public function insertChapter($title, $author, $content)
+    {
+        $req = $this->getDb()->prepare('INSERT INTO posts(title, author, content, creation_date) VALUES (:title, :author, :content, NOW())');
+        $insertChapter = $req->execute(array(
+            'title' => $title,
+            'author' => $author,
+            'content' => $content
+        ));
+        return $insertChapter;
+    }
+
+    /*Supprimer un chapitre de la base de données*/
+    public function deleteChapter($id)
+    {
+        $req = $this->getDb()->prepare('DELETE FROM posts WHERE id = ?');
+        $deleteChapter = $req->execute(array($id));
+        return $deleteChapter;
+    }
+
+    /*Mettre à jour un chapitre*/
+    public function updateChapter($id, $title, $author, $content)
+    {
+        $req = $this->getDb()->prepare('UPDATE posts SET title = :newtitle, author = :newauthor, content = :newcontent WHERE id = :thisid');
+        $updateChapter = $req->execute(array(
+            'thisid' => $id,
+            'newtitle' => $title,
+            'newauthor' => $author,
+            'newcontent' => $content
+        ));
+        return $updateChapter;
+    }
+
+    /*Vérifier qu'un id corresponde bien à un chapitre*/
+    public function checkChapterId($id)
+    {
+        $req = $this->getDb()->prepare('SELECT * FROM posts WHERE id = ?');
+        $req->execute(array($id));
+        $checkChapterId = $req->rowCount();
+        return $checkChapterId;
+        $req->closeCursor();
+    }
 }
