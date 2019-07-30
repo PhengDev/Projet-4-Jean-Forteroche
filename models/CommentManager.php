@@ -79,4 +79,21 @@ class CommentManager extends Model
         $req->closeCursor();
         return $checkCommentId;
     }
+
+    /*Signaler un commentaire*/
+    public function signalComment($id)
+    {
+        $req = $this->getDb()->prepare('UPDATE comments SET check_comment = 2 WHERE id = ?');
+        $signalComment = $req->execute(array($id));
+        return $signalComment;
+    }
+
+    /*Censurer un commentaire*/
+    public function censorComment($id)
+    {
+        $req = $this->getDb()->prepare('UPDATE comments SET check_comment = 0 WHERE id = ?');
+        $censorComment = $req->execute(array($id));
+        return $censorComment;
+    }
+
 }

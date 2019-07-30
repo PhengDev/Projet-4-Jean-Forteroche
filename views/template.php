@@ -10,7 +10,14 @@
     <meta name="author" content="Jean Forteroche">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   
+    <script src="https://cdn.tiny.cloud/1/ewxh3jblnv4y72cvw7l8k2tkd1akzee16lo9bv0s09ly5oxa/tinymce/5/tinymce.min.js"></script>
+    <script>tinyMCE.init({ selector:'#newchapter', plugins: "autoresize"});</script>
+    <script>tinyMCE.init({ selector:'#newcomment', plugins: "autoresize"});</script>
+    <script>tinyMCE.init({ selector:'#editcomment', plugins: "autoresize"});</script>
+
     <link rel="stylesheet" href="public/css/style.css" />
+    
     <title><?= $t ?></title>
 </head>
 
