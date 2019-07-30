@@ -10,7 +10,6 @@ a:hover{
     text-decoration: none;
 }
 
-
 /*                             HOME                         */
 
 /* Header */
@@ -24,7 +23,7 @@ nav img {
 }
 
 .title_home{
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .fa-home, .fa-bible, .fa-envelope, .fa-sign-in-alt, .fa-sign-out-alt {
@@ -107,6 +106,25 @@ footer {
     border-radius: 15px;
 }
 
+.backup{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.img-warning {
+    width: 20px;
+    float: left;
+    margin-right: 20px;
+   
+}
+
+.text-censor {
+    font-size: 30px;
+}
+
+.block-warning {
+    height: 50px;
+}
 /* Contenu */
 
 .content {
@@ -119,8 +137,45 @@ footer {
 }
 
 .container-page {
-    margin-top: 50px;
+    margin-top: 55px;
     padding-top: 25px;
     padding-bottom: 25px;
-    height: 100%;
+    height: auto;
+}
+
+#newchapter {
+    height: 370px;
+}
+
+/*                  Affichage de contenues sur les pages           */
+
+.container-profile, .container-editprofile, .container-editionchapter,.container-editcomment,.container-register {
+    margin-top: 55px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: auto;
+}
+
+.container-profile{
+    height: 35em;
+}
+
+.container-authentication{
+    margin-top: 150px;
+    height: 29em;
+}
+
+/*                             REGISTRATION                         */
+
+.style-register-error {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/*                             ADMIN                                */
+
+.administrator {
+    padding-top: 1px;
+    padding-bottom: 25px;
+    border-radius: 10px;
 }
