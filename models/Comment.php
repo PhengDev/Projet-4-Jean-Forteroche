@@ -9,10 +9,6 @@ class Comment
     private $_author;
     private $_comment;
     private $_date_comment_fr;
-<<<<<<< HEAD
-=======
-    private $_date_modification_fr;
->>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
     private $_check_comment;
 
     /*CONSTRUCTOR*/
@@ -78,14 +74,6 @@ class Comment
         $this->_date_comment_fr = $dateComment;
     }
 
-<<<<<<< HEAD
-=======
-    public function setDate_Modification_Fr($dateModification)
-    {
-        $this->_date_modification_fr = $dateModification;
-    }
-
->>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
     public function setCheck_Comment($checkComment)
     {
         $this->_check_comment = $checkComment;
@@ -96,11 +84,7 @@ class Comment
     {
         return $this->_id;
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
     public function idPost()
     {
         return $this->_id_post;
@@ -126,14 +110,6 @@ class Comment
         return $this->_date_comment_fr;
     }
 
-<<<<<<< HEAD
-=======
-    public function dateModification()
-    {
-        return $this->_date_modification_fr;
-    }
-
->>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
     public function checkComment()
     {
         return $this->_check_comment;
