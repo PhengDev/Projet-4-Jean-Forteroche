@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-<<<<<<< HEAD
 require_once('views/View.php');
-=======
-require_once('views/frontend/View.php');
->>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
 
 class ControllerBook {
     
