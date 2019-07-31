@@ -14,7 +14,7 @@ a:hover{
 
 /* Header */
 
-#navbarCollapse {
+#navbarToggleExternalContent {
     margin-left: 20px;
 }
 
@@ -115,11 +115,6 @@ footer {
     width: 20px;
     float: left;
     margin-right: 20px;
-   
-}
-
-.text-censor {
-    font-size: 30px;
 }
 
 .block-warning {
@@ -178,4 +173,28 @@ footer {
     padding-top: 1px;
     padding-bottom: 25px;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #navbarCollapse {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #navbarToggleExternalContent {
+        margin-left: 0px;
+    }
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .menu{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-right: 250px;
+        
+    }
 }

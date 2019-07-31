@@ -19,18 +19,17 @@ class ControllerAdministration {
         {
             echo "Error 404";
         }
+        if(isset($_GET['id']) AND !empty($_SESSION) AND $_SESSION['id'] == 1)
+        {
+            $this->id = $_GET['id'];
+            $this->checkId($this->id);
+        }
         
         if(isset($_GET['url']) == 'confirmecomment' AND isset($_GET['id_post']) AND !empty($_SESSION) AND $_SESSION['id'] == 1)
         {
             $this->id = $_GET['id'];
             $this->id_post = $_GET['id_post'];
             $this->confirmeComment($this->id, $this->id_post);
-        }
-        else if(isset($_GET['url']) == 'signalcomment' AND isset($_GET['id_post']) AND !empty($_SESSION) AND $_SESSION['id'] == 1)
-        {
-            $this->id = $_GET['id'];
-            $this->id_post = $_GET['id_post'];
-            $this->signalComment($this->id, $this->id_post);
         }
         else if(isset($_GET['url']) == 'administration' AND empty($_SESSION))
         {
@@ -92,18 +91,35 @@ class ControllerAdministration {
         }  
     }
 
-    private function signalComment($id, $id_post)
+    /*Vérifie que le chapitre existe via son Id*/
+    private function checkId($id)
     {
-        if(!empty($_SESSION) AND $_SESSION['id'] == 1)
+        $this->_chapterManager = new ChapterManager;
+        $checkChapterId = $this->_chapterManager->checkChapterId($id);
+
+        if($checkChapterId == 0)
         {
-            $this->_commentManager = new CommentManager;
-            $this->_commentManager->confirmeComment($id_post);
-            header('Location: comment&id=' . $id);
+            throw New Exception('Chapitre introuvable !');
         }
         else
         {
-            throw New Exception('Impossible d\'approuver le commentaire !');
-        }  
+            $this->comment($id);
+        }
     }
 
+    /*Affiche les commentaires d'un chapitre via l'id*/
+    public function comment($id)
+    {
+        $this->_chapterManager = new ChapterManager;
+        $chapter = $this->_chapterManager->getChapter($id);
+
+        $this->_commentManager = new CommentManager;
+        $comments = $this->_commentManager->getComments($id);
+
+        $this->_view = new View('EditComment');
+        $this->_view->generate(array(
+            'chapter' => $chapter,
+            'comments' => $comments
+        ));
+    }
 }
