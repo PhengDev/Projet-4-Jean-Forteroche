@@ -39,11 +39,10 @@ class ControllerEditprofile {
                 $this->checkFieldNewEmail();
             }
 
-            if(isset($_POST['newPassword']))
+            if($_POST['newPassword'] != "")
             {
                 $this->checkFieldNewPassword();
             }
-            
             $this->editProfile();
         }
         else if(isset($_SESSION['id']))
@@ -122,6 +121,7 @@ class ControllerEditprofile {
         {
             $this->newEmail = htmlspecialchars($_POST['newEmail']);
             $this->checkNewEmailExist();
+            $this->msg = "Vos modification ont bien été effectuer !";
         }
         else
         {
@@ -140,7 +140,7 @@ class ControllerEditprofile {
             {
                 $this->_profileManager->updateEmail($this->newEmail, $_SESSION['id']);
                 $_SESSION['email'] = $_POST['newEmail'];
-              
+                $this->msg = "Vos modification ont bien été effectuer !";
             }
             else if ( $_SESSION['email'] != $_POST['newEmail'])
             {
@@ -180,7 +180,7 @@ class ControllerEditprofile {
         else
         {
             $this->error = "Vos mot de passe ne correspondent pas !";
+            $this->msg = "";
         }
     }
-
 }

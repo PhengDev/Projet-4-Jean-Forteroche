@@ -18,7 +18,7 @@ class ControllerComment {
         {
             echo "Error 404";
         }
-        else if(isset($_GET['url']) == 'comment' AND isset($_GET['id']) AND !empty($_SESSION) AND $_SESSION['pseudo'] == 'admin')
+        else if(isset($_GET['url']) == 'comment' AND isset($_GET['id']) AND !empty($_SESSION) AND $_SESSION['id'] == 1)
         {
             $this->id = $_GET['id'];
             $this->checkId($this->id);
@@ -54,11 +54,10 @@ class ControllerComment {
         $this->_commentManager = new CommentManager;
         $comments = $this->_commentManager->getComments($id);
 
-        $this->_view = new View('Comment');
+        $this->_view = new View('EditComment');
         $this->_view->generate(array(
             'chapter' => $chapter,
             'comments' => $comments
         ));
     }
-
 }

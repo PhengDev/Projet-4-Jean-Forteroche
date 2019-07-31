@@ -4,7 +4,7 @@
 <div class="text-center mb-lg-5 mb-sm-5 mb-md-5">
 <div class="container">
         
-            <h1 class="style_title title_home text_center text-uppercase">Blog de Jean Forteroche</h1>
+            <h1 class="title_home text-center text-uppercase">Blog de Jean Forteroche</h1>
        
     </div>
     <img class="img-fluid rounded" src="public/images/Alaska.jpg" alt="image-home">
@@ -13,7 +13,7 @@
 
 <!-- Biographie -->
 <section class="jumbotron bg-info text-center mb-lg-5 mb-sm-5 mb-md-5">
-    <img src="public/images/photo.jpg" class="rounded float-left mr-lg-5 mr-sm-5 mr-md-5" id="jean-forteroche" alt="Portrait de Jean Forteroche" >
+    <img src="public/images/photo.jpg" class="rounded float-left mr-lg-5 mr-sm-5 mr-md-5 image_Jean" alt="Portrait de Jean Forteroche" >
     <div class="container">
         <h2 class="mb-4 text-uppercase">Biographie</h2>
         <p class="text-jumbotron text-justify">Jean Forteroche, né le 7 novembre 1980 à Paris, est un écrivain, philosophe, romancier, dramaturge, journaliste, essayiste et nouvelliste français. Il est aussi journaliste militant engagé dans la Résistance française et, proche des courants libertaires, dans les combats moraux de l'après-guerre.
@@ -30,8 +30,8 @@ En marge des courants philosophiques, Camus est d'abord témoin de son temps, in
 
 <!-- Chapitre -->
 <div class="py-5 bg-light" id="lastChapter">
-    <div class="container bg-secondary">
-        <h2 class="title-publication mb-4 text-white text-uppercase">Les dernières publications</h2>
+    <div class="container bg-secondary chapter_list">
+        <h2 class="text-center mb-4 text-white text-uppercase">Les dernières publications</h2>
         <div class="row">
             <?php foreach ($chapters as $chapter) : ?>
                 <div class="col-lg-4 col-md-6">
@@ -39,7 +39,7 @@ En marge des courants philosophiques, Camus est d'abord témoin de son temps, in
 
                         <div class="card-body">
                             <h5 class="card-title"><u><?= $chapter->title() ?></u></h5>
-                            <p class="card-text"><?= nl2br(html_entity_decode(substr($chapter->content(), 0, 300))) ?></p>
+                            <p class="card-text"><?= nl2br(html_entity_decode(substr($chapter->content(), 0, 300))) ?>...</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a class="btn btn-primary" href="chapter&amp;id=<?= $chapter->id() ?>" role="button">Voir chapitre</a>
                                 <small class="text-muted"><?= $chapter->date() ?></small>

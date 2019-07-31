@@ -14,18 +14,16 @@
             // Options pour les commentaires non approuvés 
             if($comment->checkComment() == 0)
             {
-                echo "<div class=\"container style-comment\">";
-                echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
+                echo "<div class=\"container style-comment text-secondary\">";
+                echo "<p class=\"text-secondary\"><span class=\"font-weight-bold \">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
+                echo "<img class=\"img-warning\" src=\"public/images/Warning-censor.png\"><p class=\"text-secondary font-weight-bold\">Ce commentaire est censuré, il ne sera pas affiché sur le chapitre.</p>"; 
                 echo "</div>";
                 echo "<div class=\"action-button\">";   
                 echo "<a class=\"btn btn-danger text-white float-right ml-2 trash2 style-button btn-supprimer-0\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalDeleteComment\" href=\"\">Supprimer</a>";   
                 echo "<a class=\"btn btn-success text-white float-right style-button btn-approuver-0\" href=\"confirmcomment&id_post=" . $comment->id() . "&id=" . $chapter->id() . "\">Approuver</a>";
                 echo "</div>";
                 echo "<br>";           
-                echo "<br>"; 
-                echo "<div class=\"container block-warning\"><img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger \">Ce commentaire est censuré, il ne sera pas affiché sur le chapitre.</p>"; 
-                echo "</div>"; 
                 echo "<br>"; 
                 echo "<hr class=\"bg-white\">";
                 echo "<br>"; 
@@ -55,7 +53,7 @@
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
                 if($comment->checkComment() == 2)
                 {
-                    echo "<p class=\"text-danger font-weight-bold\">Ce commentaire a été signaler !</p>";
+                    echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger font-weight-bold\">Ce commentaire a été signaler !</p>";
                 }
                 echo "</div>";
                 echo "<div class=\"action-button\">";   
