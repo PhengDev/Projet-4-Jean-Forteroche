@@ -10,6 +10,10 @@ a:hover{
     text-decoration: none;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
 /*                             HOME                         */
 
 /* Header */
@@ -23,7 +27,11 @@ nav img {
 }
 
 .title_home{
+<<<<<<< HEAD
     margin-top: 70px;
+=======
+    margin-top: 60px;
+>>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
 }
 
 .fa-home, .fa-bible, .fa-envelope, .fa-sign-in-alt, .fa-sign-out-alt {
@@ -106,6 +114,7 @@ footer {
     border-radius: 15px;
 }
 
+<<<<<<< HEAD
 .backup{
     padding: 5px;
     border-radius: 10px;
@@ -125,6 +134,8 @@ footer {
 .block-warning {
     height: 50px;
 }
+=======
+>>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
 /* Contenu */
 
 .content {
@@ -137,6 +148,7 @@ footer {
 }
 
 .container-page {
+<<<<<<< HEAD
     margin-top: 55px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -178,4 +190,10 @@ footer {
     padding-top: 1px;
     padding-bottom: 25px;
     border-radius: 10px;
+=======
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 100%;
+>>>>>>> 565928eb8b1d596b75d72e85f9aa745f3de721c0
 }
