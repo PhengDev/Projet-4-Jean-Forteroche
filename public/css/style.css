@@ -63,12 +63,14 @@ color: blue;
     margin: 0px;
 }
 
-footer {
+.footer {
     height: 50px;
 	display: flex;
 	justify-content: center;
     align-items: center;
     align-content: center;
+    position: absolute;
+    bottom: 0px;
 }
 
 .fa-copyright {
