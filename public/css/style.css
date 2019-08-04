@@ -41,6 +41,7 @@ color: blue;
     height: 300px;
     width: 300px;
     margin-bottom: 30px;
+    float: left;
 }
 
 .jumbotron {
@@ -187,7 +188,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
+    
+    /* HOME */
     #navbarCollapse {
         margin-left: 0px;
     }
@@ -195,17 +197,54 @@ footer {
 
 @media screen and (max-width: 425px) {
 
-    #navbarToggleExternalContent {
-        margin-left: 0px;
-    }
+    /* HOME */
     .jumbotron {
         margin-top: 20px;
     }
+
     .menu{
         display:flex;
         justify-content: space-around;
         flex-direction: column;
         margin-right: 250px;
-        
+    }
+
+    footer i{
+        margin:auto;
+        padding-left: 10px;
+    }
+
+    .image_Jean {
+        float: initial;
+    }
+
+    .dropright .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+    }
+
+    .dropright .dropdown-menu {
+        top: initial;
+        left:initial;
+        margin-left: initial;
+    }
+
+    .nav{
+        width: 200px;
+    }
+
+    #navbarToggleExternalContent {
+        margin-left: 0px;
+    }
+
+    /* BOOK */
+    .rpv-center{
+        text-align: center;
     }
 }

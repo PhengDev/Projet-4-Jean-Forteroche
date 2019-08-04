@@ -13,7 +13,7 @@
 
 <!-- Biographie -->
 <section class="jumbotron bg-info text-center mb-lg-5 mb-sm-5 mb-md-5">
-    <img src="public/images/photo.jpg" class="rounded float-left mr-lg-5 mr-sm-5 mr-md-5 image_Jean" alt="Portrait de Jean Forteroche" >
+    <img src="public/images/photo.jpg" class="rounded mr-lg-5 mr-sm-5 mr-md-5 image_Jean" alt="Portrait de Jean Forteroche" >
     <div class="container">
         <h2 class="mb-4 text-uppercase">Biographie</h2>
         <p class="text-jumbotron text-justify">Jean Forteroche, né le 7 novembre 1980 à Paris, est un écrivain, philosophe, romancier, dramaturge, journaliste, essayiste et nouvelliste français. Il est aussi journaliste militant engagé dans la Résistance française et, proche des courants libertaires, dans les combats moraux de l'après-guerre.
@@ -38,7 +38,7 @@ En marge des courants philosophiques, Camus est d'abord témoin de son temps, in
                     <div class="card mb-4 box-shadow">
 
                         <div class="card-body">
-                            <h5 class="card-title"><u><?= $chapter->title() ?></u></h5>
+                            <h5 class="card-title rpv-center"><u><?= $chapter->title() ?></u></h5>
                             <p class="card-text"><?= nl2br(html_entity_decode(substr($chapter->content(), 0, 300))) ?>...</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a class="btn btn-primary" href="chapter&amp;id=<?= $chapter->id() ?>" role="button">Voir chapitre</a>

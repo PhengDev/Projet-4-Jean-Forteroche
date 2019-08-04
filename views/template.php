@@ -39,8 +39,9 @@
     <header>
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
-            <img class="img-fluid" src="public/images/logo1.png" id="navbar-logo">
-
+            <a href="home">
+                <img class="img-fluid" src="public/images/logo1.png" id="navbar-logo">
+            </a>
             <!-- Toggle pour mobile -->
             <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +58,7 @@
                             <a class="dropdown-item menu-hover" href="book">Billet simple pour l'Alaska</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item test">
                         <!-- Affichage de la variable menu -->
                         <?= $menu ?>
                     </li>
@@ -70,9 +71,10 @@
     <?= $content ?>
 
     <footer class="footer bg-dark">
-
-        <i class="far fa-copyright"></i>
-        <p class="text-footer text-light"> 2019 JEAN FORTEROCHE | LY PHENG - OPENCLASSCROOM</p>
+        <div class="d-flex justify-content-center">
+            <i class="far fa-copyright float-left "></i>
+            <p class="text-footer text-light"> 2019 JEAN FORTEROCHE | LY PHENG - OPENCLASSCROOM</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

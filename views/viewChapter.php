@@ -35,7 +35,7 @@
         }
         // Sinon affichage d'un lien pour se connecter ou s'inscrire
         else {
-            echo  $content = "<p class=\"text-center\"><a href=\"authentication\">Connectez-vous</a> ou <a href=\"register\">inscrivez-vous</a> pour ajouter un commentaire.</p>";
+            echo  $content = "<p class=\"text-center\"><a href=\"authentication\">Connectez-vous</a> pour ajouter un commentaire.</p>";
         }
         ?>
         <p class="text-center text-danger font-weight-bold style-register-error"><?php if (isset($error)) {
@@ -59,7 +59,7 @@
                         echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . '</span> le ' .  $comment->dateComment() . "</p>";
                     }
                     echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
-                    echo "<div class=\"dropdown-divider\"></div>";
+                    echo "<hr>";
                     echo "<div class=\"comment-flex\">";
 
                     // Bouton pour signaler un message

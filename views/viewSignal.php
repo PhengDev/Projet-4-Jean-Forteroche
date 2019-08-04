@@ -2,13 +2,13 @@
 $signal;
 
 if ($signalsComments) {
-        $signal = "<table class=\"table table-responsive-sm text-center\">
+        $signal = "<table class=\"table table-responsive-sm text-center table-responsive-sm test\">
                         <thead class=\"thead-light\">
                             <tr>
                                 <th scope=\"col\">Chapitre</th>
                                 <th scope=\"col\">Auteur</th>
                                 <th scope=\"col\">Message</th>
-                                <th scope=\"col\">Message</th>
+                                <th scope=\"col\">Editer</th>
                             </tr>
                         </thead>";
                         foreach ($signalsComments as $signalComment) {
