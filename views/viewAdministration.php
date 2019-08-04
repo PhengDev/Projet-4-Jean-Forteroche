@@ -6,12 +6,12 @@ require_once("views/viewSignal.php"); ?>
     <div class="container col-lg-8  bg-light administrator">
         <!-- Affichage des commentaires signalés -->
         <div>
-        <h2 class="text-center mt-5 mb-5">Liste des commentaires signalés</h2>        
+        <h2 class="text-center mt-5 mb-5 bg-secondary text-white rounded">Liste des commentaires signalés</h2>        
             <?= $signal ?>
         </div>
 
         <!-- Affichage des chapitres -->
-        <h2 class="text-center mt-5 mb-5">Liste des chapitres</h2>
+        <h2 class="text-center mt-5 mb-5  bg-secondary text-white rounded">Liste des chapitres</h2>
         <table class="table table-responsive-sm text-center">
             <thead class="thead-light">
                 <tr>
