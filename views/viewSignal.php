@@ -20,7 +20,7 @@ if ($signalsComments) {
                                 <td>" . html_entity_decode($signalComment->comment()) . "</td>
                                 <td>
                                     <div class=\"text-center\">
-                                        <a class=\"btn btn-primary btn-sm\" href=\"comment&amp;id=" . $signalComment->idPost() . "\">Voir les commentaires signalés</a>
+                                        <a class=\"btn btn-primary btn-sm\" href=\"editsignal&amp;id=" . $signalComment->idPost() . "\">Voir les commentaires signalés</a>
                                     </div>
                                 </td>
                             </tr>

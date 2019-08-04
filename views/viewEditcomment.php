@@ -1,6 +1,6 @@
 <?php $this->_t = "Administration des commentaires"; ?>
 
-<div class="container-page bg-secondary">
+<div class="container-editcomment bg-secondary">
 
     <div class="container col-lg-8 style-link text-center">
         <a href="administration" class="bg-primary text-white backup ">Retour sur l'administration</a>
@@ -8,16 +8,16 @@
 
     <div class="container bg-dark">
         <!-- Affichage des commentaires d'un chapiter -->
-        <h2 class="mt-4 text-center text-white">Commentaires du <?= $chapter->title() ?></h2>
+        <h2 class="mt-4 pt-4 text-center text-white">Commentaires du <?= $chapter->title() ?></h2>
         <?php foreach($comments as $comment) : ?>
         <?php
             // Options pour les commentaires non approuvés 
             if($comment->checkComment() == 0)
             {
-                echo "<div class=\"container style-comment text-secondary\">";
-                echo "<p class=\"text-secondary\"><span class=\"font-weight-bold \">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
+                echo "<div class=\"container text-white progress-bar-striped\">";
+                echo "<p><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
-                echo "<img class=\"img-warning\" src=\"public/images/Warning-censor.png\"><p class=\"text-secondary font-weight-bold\">Ce commentaire est censuré, il ne sera pas affiché sur le chapitre.</p>"; 
+                echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger font-weight-bold\">Ce commentaire est censuré, il ne sera pas affiché sur le chapitre.</p>"; 
                 echo "</div>";
                 echo "<div class=\"action-button\">";   
                 echo "<a class=\"btn btn-danger text-white float-right ml-2 trash2 style-button btn-supprimer-0\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalDeleteComment\" href=\"\">Supprimer</a>";   
@@ -51,7 +51,7 @@
                 echo "<div class=\"container style-comment\">";
                 echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
-                if($comment->checkComment() == 2)
+                if($comment->checkComment())
                 {
                     echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger font-weight-bold\">Ce commentaire a été signaler !</p>";
                 }

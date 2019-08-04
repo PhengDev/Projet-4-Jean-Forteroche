@@ -19,13 +19,6 @@ class ControllerAdministration {
         {
             echo "Error 404";
         }
-      
-        if(isset($_GET['url']) == 'confirmecomment' AND isset($_GET['id_post']) AND !empty($_SESSION) AND $_SESSION['id'] == 1)
-        {
-            $this->id = $_GET['id'];
-            $this->id_post = $_GET['id_post'];
-            $this->confirmeComment($this->id, $this->id_post);
-        }
         else if(isset($_GET['url']) == 'administration' AND empty($_SESSION))
         {
             throw new Exception('Page introuvable');
@@ -70,19 +63,5 @@ class ControllerAdministration {
         $this->_chapterManager = new ChapterManager;
         $deleteChapter = $this->_chapterManager->deleteChapter($id);
         header('Location: administration');
-    }
-
-    private function confirmeComment($id, $id_post)
-    {
-        if(!empty($_SESSION) AND $_SESSION['id'] == 1)
-        {
-            $this->_commentManager = new CommentManager;
-            $this->_commentManager->confirmeComment($id_post);
-            header('Location: comment&id=' . $id);
-        }
-        else
-        {
-            throw New Exception('Impossible d\'approuver le commentaire !');
-        }  
     }
 }

@@ -63,13 +63,12 @@ color: blue;
     margin: 0px;
 }
 
-.footer {
+footer {
     height: 50px;
 	display: flex;
 	justify-content: center;
     align-items: center;
     align-content: center;
-    position: absolute;
     bottom: 0px;
 }
 
@@ -144,9 +143,15 @@ color: blue;
     height: 370px;
 }
 
+.progress-bar-striped{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 /*                  Affichage de contenues sur les pages           */
 
-.container-profile, .container-editprofile, .container-editionchapter,.container-editcomment,.container-register {
+.container-profile, .container-editprofile, .container-editionchapter,.container-editcomment,.container-register,.container-editsignal{
     margin-top: 55px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -160,6 +165,10 @@ color: blue;
 .container-authentication{
     margin-top: 150px;
     height: 29em;
+}
+
+.container-editsignal{
+    height: 50em;
 }
 
 /*                             REGISTRATION                         */

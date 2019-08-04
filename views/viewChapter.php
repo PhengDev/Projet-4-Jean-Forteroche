@@ -65,7 +65,7 @@
                     // Bouton pour signaler un message
                     if (!empty($_SESSION) and $comment->checkComment() == 1 and $_SESSION['id'] > 1 and $_SESSION['pseudo'] !== $comment->author()) {
                         echo "<p><a class=\"text-danger trash3\" href=\"\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalSignalComment\">Signaler le commentaire</a></p>";
-                    } else if ($comment->checkComment() == 2) {
+                    } else if ($comment->checkComment() == 2 AND !empty($_SESSION)) {
                         echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger trash3\" >Ce commentaire a été signaler !</p>";
                     }
                     echo "</div>";

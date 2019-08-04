@@ -10,7 +10,7 @@
 
     <div class="container col-lg-6 style-container bg-dark text-white"> 
         <h2 class="text-center">Profil</h2><br>
-        <p>Nom : <?= $profile->pseudo(); ?></p>
+        <p>Pseudo : <?= $profile->pseudo(); ?></p>
         <p>Email : <?= $profile->email(); ?></p>
         <p>Date d'inscription : <?= $profile->dateInscription(); ?></p>
         <p>Statut : <?= $status ?></p>
