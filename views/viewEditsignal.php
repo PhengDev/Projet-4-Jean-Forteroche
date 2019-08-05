@@ -17,6 +17,7 @@
                 echo "<div class=\"container style-comment\">";
                 echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
+                echo "<hr>";
                 if($comment->checkComment() == 2)
                 {
                     echo "<p class=\"text-danger font-weight-bold\">Ce commentaire a été signaler !</p>";

@@ -17,6 +17,7 @@
                 echo "<div class=\"container text-white progress-bar-striped\">";
                 echo "<p><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
+                echo "<hr>";
                 echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger font-weight-bold\">Ce commentaire est censuré, il ne sera pas affiché sur le chapitre.</p>"; 
                 echo "</div>";
                 echo "<div class=\"action-button\">";   
@@ -35,6 +36,7 @@
                 echo "<div class=\"container style-comment\">";
                 echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
+                echo "<hr>";
                 echo "</div>";
                 echo "<div class=\"action-button\">";    
                 echo "<a class=\"btn btn-danger text-white float-right ml-2 trash2 style-button btn-supprimer-1\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalDeleteComment\" href=\"\">Supprimer</a>";
@@ -51,6 +53,7 @@
                 echo "<div class=\"container style-comment\">";
                 echo "<p class=\"text-primary\"><span class=\"font-weight-bold\">" . $comment->author() . "</span> le " . $comment->dateComment() . "</p>";
                 echo "<p>" . html_entity_decode($comment->comment()) . "</p>";
+                echo "<hr>";
                 if($comment->checkComment())
                 {
                     echo "<img class=\"img-warning\" src=\"public/images/Warning.png\"><p class=\"text-danger font-weight-bold\">Ce commentaire a été signaler !</p>";
