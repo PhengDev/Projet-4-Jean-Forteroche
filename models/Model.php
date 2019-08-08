@@ -1,6 +1,6 @@
 <?php
 
-abstract class Model
+class Model
 {
     private static $_db;
 
