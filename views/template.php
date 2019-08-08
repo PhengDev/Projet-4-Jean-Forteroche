@@ -17,19 +17,6 @@
             plugins: "autoresize"
         });
     </script>
-    <script>
-        tinyMCE.init({
-            selector: '#newcomment',
-            plugins: "autoresize"
-        });
-    </script>
-    <script>
-        tinyMCE.init({
-            selector: '#editcomment',
-            plugins: "autoresize"
-        });
-    </script>
-
     <link rel="stylesheet" href="public/css/style.css" />
     <link rel="icon" type="img/png" href="public/images/logo1.png" sizes="30x30">
     <title><?= $t ?></title>
