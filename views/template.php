@@ -39,7 +39,7 @@
     <header>
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
-            <a href="home">
+            <a href="<?= URL ?>">
                 <img class="img-fluid" src="public/images/logo1.png" id="navbar-logo">
             </a>
             <!-- Toggle pour mobile -->
