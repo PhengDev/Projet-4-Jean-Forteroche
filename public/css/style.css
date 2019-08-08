@@ -133,12 +133,7 @@ footer {
     margin-left: 0px;
 }
 
-.container-page {
-    margin-top: 55px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    height: auto;
-}
+
 
 #newchapter {
     height: 370px;
@@ -152,28 +147,11 @@ footer {
 
 /*                  Affichage de contenues sur les pages           */
 
-.container-profile, .container-editprofile, .container-editionchapter,.container-editcomment,.container-register,.container-editsignal{
+.container-page {
     margin-top: 55px;
     padding-top: 25px;
     padding-bottom: 25px;
     height: auto;
-}
-
-.container-profile{
-    height: 35em;
-}
-
-.container-authentication{
-    margin-top: 150px;
-    height: 29em;
-}
-
-.container-register{
-    height: 35em;
-}
-
-.container-editsignal{
-    height: 50em;
 }
 
 /*                             REGISTRATION                         */

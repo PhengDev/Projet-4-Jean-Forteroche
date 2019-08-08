@@ -17,3 +17,9 @@ $('.mode-signal').click(function(){
     const id=$(this).data('id');
     $('#modalSignalC').attr('href','signalcomment&id_post='+idPost+'&id='+id);
 })
+
+if ($('.container-page').height() < 450) {
+    $('.container-page').css("height","35em");
+} else {
+    $('.container-page').css("height","auto");
+}

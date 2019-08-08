@@ -6,7 +6,7 @@
     }
 ?>
 
-<div class="container-profile bg-light">
+<div class="container-page bg-light">
 
     <div class="container col-lg-6 style-container bg-dark text-white"> 
         <h2 class="text-center">Profil</h2><br>

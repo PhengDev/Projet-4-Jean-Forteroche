@@ -1,6 +1,6 @@
 <?php $this->_t = "Administration des commentaires"; ?>
 
-<div class="container-editcomment bg-secondary">
+<div class="container-page bg-secondary">
 
     <div class="container col-lg-8 style-link text-center">
         <a href="administration" class="bg-primary text-white backup ">Retour sur l'administration</a>

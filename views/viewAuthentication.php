@@ -1,6 +1,6 @@
 <?php $this->_t = "Connexion"; ?>
 
-<div class="container-profile bg-light">
+<div class="container-page bg-light">
 
     <div class="container">
         <!-- Formulaire de connexion au site -->

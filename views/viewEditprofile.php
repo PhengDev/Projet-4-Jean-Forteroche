@@ -1,7 +1,7 @@
 <?php $this->_t = "Edition du profil" ?>
 
 <!-- Edition du profil -->
-<div class="container-editprofile bg-light">
+<div class="container-page bg-light">
 <div class="container col-lg-8 style-link text-center">
         <a href="profile&id=<?= $_SESSION['id']?>" class="bg-primary text-white backup">Retour au profil</a>
     </div>
