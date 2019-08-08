@@ -30,7 +30,7 @@ require_once("views/viewSignal.php"); ?>
                         <td>
                             <div>
                                 <a href="editchapter&amp;id=<?= $chapter->id() ?>" class="btn btn-sm btn-primary m-1">Modifier</a>
-                                <a href="" class="btn btn-sm btn-danger trash m-1" data-toggle="modal" data-id="<?= $chapter->id() ?>" data-target="#modalDeleteChapter">Supprimer</a>
+                                <a href="" class="btn btn-sm btn-danger mode-admin-delete m-1" data-toggle="modal" data-id="<?= $chapter->id() ?>" data-target="#modalDeleteChapter">Supprimer</a>
                                 <a href="comment&amp;id=<?= $chapter->id() ?>" class="btn btn-sm bg-secondary">Commentaire</a>
                             </div>
                         </td>

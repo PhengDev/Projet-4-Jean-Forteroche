@@ -31,6 +31,11 @@ class ControllerEditprofile {
             if($_POST['newPassword'] != "")
             {
                 $this->checkFieldNewPassword();
+                $this->checkFieldNewPseudo();
+                $this->checkFieldNewEmail();
+                if ($this->error == ""){
+                    $this->msg = "Vos modification ont bien été effectuer !";
+                }
             } else {
                 $this->checkFieldNewPseudo();
                 $this->checkFieldNewEmail();

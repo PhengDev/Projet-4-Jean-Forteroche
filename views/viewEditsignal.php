@@ -1,4 +1,4 @@
-<?php $this->_t = "Edit Signal"; ?>
+<?php $this->_t = "Administration des signals"; ?>
 
 <div class="container-editsignal bg-secondary">
 
@@ -24,9 +24,9 @@
                 }
                 echo "</div>";
                 echo "<div class=\"action-button\">";   
-                echo "<a class=\"btn btn-danger text-white float-right ml-2 trash2 style-button btn-supprimer-2\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalDeleteComment\" href=\"\">Supprimer</a>";
+                echo "<a class=\"btn btn-danger text-white float-right ml-2 mode-delete style-button btn-supprimer-2\" data-toggle=\"modal\" data-id=\"" . $chapter->id() . "\" data-idpost=\"" . $comment->id() . "\" data-target=\"#modalDeleteComment\" href=\"\">Supprimer</a>";
                 echo "<a class=\"btn btn-secondary text-white float-right style-button btn-annuler-2\" href=\"censorcomment&id_post=" . $comment->id() . "&id=" . $chapter->id() . "\">Censurer</a>";
-                echo "<a class=\"btn btn-success text-white float-right mr-2 style-button btn-approuver-2\" href=\"comment&id_post=" . $comment->id() . "&id=" . $chapter->id() . "\">Approuver</a>";
+                echo "<a class=\"btn btn-success text-white float-right mr-2 style-button btn-approuver-2\" href=\"confirmcomment&id_post=" . $comment->id() . "&id=" . $chapter->id() . "\">Approuver</a>";
                 echo "</div>";
                 echo "<br>";                
                 echo "<br>"; 
@@ -55,7 +55,7 @@
                 Êtes-vous sûr de vouloir supprimer le commentaire ?   
             </div>
             <div class="modal-footer">
-                <a href="" id="modalDeleteC" class="btn btn-danger">Supprimer</a>
+                <a href="" class="btn btn-danger">Supprimer</a>
                 <a href="" class="btn btn-secondary" data-dismiss="modal">Annuler</a>
             </div>
         </div>
